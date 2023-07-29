@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("running")
+        var b = document.getElementById("button1");
+        b.addEventListener("click",change);
+        let value = 1;
+        function change()
+        {
+            var b = document.getElementById("button1");
+            var i = Math.floor(Math.random()*80)+1;
+            var j = Math.floor(Math.random()*80)+1;
+            b.style.left = i+"vw";
+            b.style.top = j+"vh";
+            let val = parseInt(document.querySelector("input").value);
+            if(val == 1){
+                document.getElementById("button1").innerHTML = "Missed me";
+            }
+            else if(val == 2){
+                document.getElementById("button1").innerHTML = "Missed me";
+            }
+            else if(val == 3){
+                document.getElementById("button1").innerHTML = "Missed me again";
+            }
+            else if(val == 4){
+                document.getElementById("button1").innerHTML = "firse yrrr";
+            }
+            else if(val == 5){
+                document.getElementById("button1").innerHTML = "try once again";
+            }
+            else if(val == 6){
+                document.getElementById("button1").innerHTML = "ok ok last time";
+            }
+            else if(val == 7){
+                document.getElementById("button1").innerHTML = "HEHEHE";
+            }
+            else if(val == 8){
+                document.getElementById("button1").style.display = "none";
+                document.getElementById("button2").style.display = "block";
+
+            }
+            document.querySelector("input").value = val+1;
+            console.log(val+1);
+        }
+</script>
+</head>
+<body>
+    <button id="button1" class="btn btn-primary" style="display: block; position: absolute; left: 20vw; top:30vh" onclick="change()">Click me to proceed</button>
+    <button id="button2" class="btn btn-primary" style="display: none; position: absolute; left: 20vw; top:30vh;" ><a style="color: aliceblue; text-decoration: none;" href="https://wa.me/917507484008">😁😁😁</a></button>
+    <input type="hidden" name="ptk" value="1">
+</body>
+</html>
